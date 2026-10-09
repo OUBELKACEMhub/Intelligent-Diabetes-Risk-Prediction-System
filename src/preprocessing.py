@@ -20,6 +20,7 @@ def load_and_preprocess_data():
     processed_dir = DATA_DIR / "processed"
     processed_dir.mkdir(parents=True, exist_ok=True)
     
+    
     cleaned_path = processed_dir / "pima_diabetes_cleaned.csv"
     df.to_csv(cleaned_path, index=False)
     

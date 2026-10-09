@@ -16,6 +16,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 MODELS_DIR = PROJECT_ROOT / "models"
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
+
 def train_and_evaluate():
     print("--- Étape 5 : Classification Supervisée et Pipeline ---")
     df = apply_clustering()

@@ -43,6 +43,6 @@ def apply_clustering():
     print("Dataset avec risk_category sauvegardé.")
     
     return df
-
+ 
 if __name__ == "__main__":
     apply_clustering()
