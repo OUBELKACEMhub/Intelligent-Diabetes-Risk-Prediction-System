@@ -7,7 +7,6 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
 
 def apply_clustering():
-    print("--- Étape 3 & 4 : Clustering K-Means et Analyse ---")
     df, df_scaled = load_and_preprocess_data()
     
     if "id" in df_scaled.columns:
@@ -37,7 +36,7 @@ def apply_clustering():
     
     df['risk_category'] = df['Cluster'].apply(lambda x: 1 if x in high_risk_clusters else 0)
     
-    # Sauvegarde du dataset enrichi avec les risques
+    # Sauvegarde du dataset enrichi avec les risque
     risk_path = DATA_DIR / "processed" / "pima_diabetes_clusters_risk.csv"
     df.to_csv(risk_path, index=False)
     print("Dataset avec risk_category sauvegardé.")
