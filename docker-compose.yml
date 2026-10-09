@@ -1,0 +1,30 @@
+services:
+  diabetes-ml:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: diabetes-ml
+
+    ports:
+      - "8000:8000"
+      - "8501:8501"
+      - "5000:5000"
+      - "8080:8080"
+      - "5000:5000"   
+      - "8502:8502"
+
+    volumes:
+      - .:/app
+      - mlflow_data:/app/mlartifacts
+      - airflow_data:/opt/airflow
+      
+    environment:
+      MLFLOW_TRACKING_URI: http://localhost:5000
+      AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+
+    restart: unless-stopped
+
+volumes:
+  mlflow_data:
+  airflow_data:

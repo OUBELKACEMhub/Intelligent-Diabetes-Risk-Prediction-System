@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+.env
+.env.*
+!.env.example
+
+mlflow.db
+mlruns/
+mlartifacts/
+models/
+
+*.log
