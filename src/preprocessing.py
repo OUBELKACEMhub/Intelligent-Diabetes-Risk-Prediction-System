@@ -16,7 +16,7 @@ def load_and_preprocess_data():
     print("Dimensions du dataset :", df.shape)
     print("Valeurs manquantes :\n", df.isnull().sum())
     
-    # Sauvegarde du dataset nettoyé (si ce n'est pas déjà fait)
+    # Sauvegarde du dataset nettoyé 
     processed_dir = DATA_DIR / "processed"
     processed_dir.mkdir(parents=True, exist_ok=True)
     

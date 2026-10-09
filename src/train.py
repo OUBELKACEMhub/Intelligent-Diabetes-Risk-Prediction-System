@@ -30,7 +30,7 @@ def train_and_evaluate():
         X, y, test_size=0.2, random_state=42, stratify=y
     )
     
-    # Gestion du déséquilibre des classes (Oversampling)
+    # Gestion du déséquilibre des classes )
     ros = RandomOverSampler(random_state=42)
     X_train_resampled, y_train_resampled = ros.fit_resample(X_train, y_train)
     
