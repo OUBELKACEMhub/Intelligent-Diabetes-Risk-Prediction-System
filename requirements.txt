@@ -8,5 +8,5 @@ imbalanced-learn
 mlflow
 matplotlib
 seaborn
-joblib
 nbimporter
+joblib
