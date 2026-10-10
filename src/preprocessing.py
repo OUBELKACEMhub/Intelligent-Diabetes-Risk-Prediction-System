@@ -2,6 +2,7 @@ from pathlib import Path
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
+
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
 

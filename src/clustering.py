@@ -1,7 +1,10 @@
+import sys
+import os
 from pathlib import Path
 import pandas as pd
 from sklearn.cluster import KMeans
-from preprocessing import load_and_preprocess_data
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from src.preprocessing import load_and_preprocess_data
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = PROJECT_ROOT / "data"
