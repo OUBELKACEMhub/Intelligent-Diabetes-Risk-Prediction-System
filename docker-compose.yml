@@ -6,6 +6,7 @@ services:
 
     container_name: diabetes-ml
 
+
     ports:
       - "8000:8000"
       - "8501:8501"
@@ -18,6 +19,8 @@ services:
       - .:/app
       - mlflow_data:/app/mlartifacts
       - airflow_data:/opt/airflow
+      - ./airflow/dags:/opt/airflow/dags
+      - ./src:/opt/airflow/src
       
     environment:
       MLFLOW_TRACKING_URI: http://localhost:5000

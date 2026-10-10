@@ -17,6 +17,7 @@ WORKDIR /app
 
 COPY . /app
 
+
 USER root
 
 RUN mkdir -p /var/log/supervisor \
